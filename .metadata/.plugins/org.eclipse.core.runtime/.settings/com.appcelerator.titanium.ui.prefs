@@ -1,4 +1,6 @@
 =run
+DefaultProjecte\:launchMode=run
+DefaultProjecte\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.ipad.launchShortcut.EBEB5018-7E63-42AF-8342-3374D357775B
 LAST_LAUNCH_TIMESTAMP=1430950493114
 eclipse.preferences.version=1
 preference.show.console.onError=true
