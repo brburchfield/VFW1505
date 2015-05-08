@@ -1,7 +1,9 @@
 =run
+Burchfield_Beau_Project1\:launchMode=run
+Burchfield_Beau_Project1\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.ipad.launchShortcut.EBEB5018-7E63-42AF-8342-3374D357775B
 DefaultProjecte\:launchMode=run
-DefaultProjecte\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.ipad.launchShortcut.EBEB5018-7E63-42AF-8342-3374D357775B
-LAST_LAUNCH_TIMESTAMP=1430950493114
+DefaultProjecte\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.198F1353-0E08-4064-92FA-973DE01E35A6
+LAST_LAUNCH_TIMESTAMP=1431104245156
 eclipse.preferences.version=1
 preference.show.console.onError=true
 preference.studio.perspective.version=103
