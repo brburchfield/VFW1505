@@ -1,0 +1,136 @@
+Ti.UI.setBackgroundColor("#000");
+
+var mainWindow = Ti.UI.createWindow({
+	backgroundColor: "#6b3939"
+});
+
+//Main Title View
+var launchView = Ti.UI.createView({
+	backgroundColor: "#fff",
+	borderRadius: 5,
+	borderwidth: 1,
+	height: 250,
+	top: 100,
+	left: 20,
+	right: 20
+});
+
+//Main Title Label
+var launchViewText = Ti.UI.createLabel({
+	text: " Five Great Quotes from Five Great Minds",
+	color: "#000",
+	font: {fontSize: 42, fontFamily: "Helvetica", fontWeight: "bold"},
+	top: 40,
+	left: 30,
+	right: 20
+});
+
+//Main Title Button
+var launchButton = Ti.UI.createView({
+	backgroundColor: "#31dd25",
+	borderRadius: 20,
+	borderWidth: 1,
+	top: 370,
+	height: 50,
+	left: 20,
+	right: 20
+});
+
+//Main Title Button Label
+var launchButtonText = Ti.UI.createLabel({
+	text: "Let's Get Started",
+	color: "#fff",
+	font: {fontSize: 30, fontFamily: "Helvetica", fontWeight: "bold"},
+	top: 7,
+	left: 50,
+});
+
+//Label Drop-Shadow
+var launchButtonTextShadow = Ti.UI.createLabel({
+	text: "Let's Get Started",
+	color: "#787878",
+	font: {fontSize: 30, fontFamily: "Helvetica", fontWeight: "bold"},
+	top: 9,
+	left: 52,
+});
+
+launchView.add(launchViewText);
+launchButton.add(launchButtonTextShadow, launchButtonText);
+mainWindow.add(launchView, launchButton);
+mainWindow.open();
+
+
+//------------To be sent to separate file----------------
+
+var quotes = [];
+
+quotes[0] = "Test#1";
+quotes[1] = "Test#2";
+quotes[2] = "Test#3";
+quotes[3] = "Test#4";
+quotes[4] = "Test#5";
+
+var listOptions = function(){
+	launchViewText.hide();
+	launchButton.hide();
+	launchViewText = null;
+	launchButton = null;
+	
+	
+	var mainViewText = Ti.UI.createLabel({
+	text: quotes[0],
+	color: "#000",
+	font: {fontSize: 42, fontFamily: "Helvetica", fontWeight: "bold"},
+	top: 40,
+	left: 30,
+	right: 20
+		
+	});
+	
+	var nextButton = Ti.UI.createView({
+	backgroundColor: "#31dd25",
+	borderRadius: 20,
+	borderWidth: 1,
+	top: 370,
+	height: 50,
+	left: 200,
+	right: 20
+	});
+	
+	var nextButtonLabel = Ti.UI.createLabel({
+	text: "Next",
+	color: "#fff",
+	font: {fontSize: 30, fontFamily: "Helvetica", fontWeight: "bold"},
+	top: 7,
+	left: 40,
+	});
+	
+	var backButton = Ti.UI.createView({
+	backgroundColor: "#31dd25",
+	borderRadius: 20,
+	borderWidth: 1,
+	top: 370,
+	height: 50,
+	left: 20,
+	right: 200
+	});
+	
+		var backButtonLabel = Ti.UI.createLabel({
+	text: "Back",
+	color: "#fff",
+	font: {fontSize: 30, fontFamily: "Helvetica", fontWeight: "bold"},
+	top: 7,
+	left: 40,
+	});
+	
+	backButton.add(backButtonLabel);
+	nextButton.add(nextButtonLabel);
+	launchView.add(mainViewText);
+	mainWindow.add(nextButton, backButton);
+};
+
+
+
+launchButton.addEventListener("click", listOptions);
+
+

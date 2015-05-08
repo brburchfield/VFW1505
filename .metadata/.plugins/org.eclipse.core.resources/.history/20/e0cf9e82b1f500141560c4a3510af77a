@@ -1,0 +1,28 @@
+Ti.UI.setBackgroundColor("#000");
+
+var mainWindow = Ti.UI.createWindow({
+	backgroundColor: "#6b3939"
+});
+
+var launchView = Ti.UI.createView({
+	backgroundColor: "#fff",
+	borderRadius: 5,
+	borderwidth: 1,
+	height: 250,
+	top: 100,
+	left: 20,
+	right: 20
+});
+
+var launchButton = Ti.UI.createView({
+	backgroundColor: "#31dd25",
+	borderRadius: 20,
+	borderWidth: 1,
+	top: 370,
+	height: 50,
+	left: 20,
+	right: 20
+});
+
+mainWindow.add(launchView, launchButton)
+mainWindow.open();

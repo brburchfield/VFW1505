@@ -1,64 +1,63 @@
-// this sets the background color of the master UIView (when there are no windows/tab groups on it)
-Titanium.UI.setBackgroundColor('#000');
+Ti.UI.setBackgroundColor("#000");
 
-// create tab group
-var tabGroup = Titanium.UI.createTabGroup();
-
-
-//
-// create base UI tab and root window
-//
-var win1 = Titanium.UI.createWindow({  
-    title:'Tab 1',
-    backgroundColor:'#fff'
-});
-var tab1 = Titanium.UI.createTab({  
-    icon:'KS_nav_views.png',
-    title:'Tab 1',
-    window:win1
+var mainWindow = Ti.UI.createWindow({
+	backgroundColor: "#6b3939"
 });
 
-var label1 = Titanium.UI.createLabel({
-	color:'#999',
-	text:'I am Window 1',
-	font:{fontSize:20,fontFamily:'Helvetica Neue'},
-	textAlign:'center',
-	width:'auto'
+//Main Title View
+var launchView = Ti.UI.createView({
+	backgroundColor: "#fff",
+	borderRadius: 5,
+	borderwidth: 1,
+	height: 250,
+	top: 100,
+	left: 20,
+	right: 20
 });
 
-win1.add(label1);
-
-//
-// create controls tab and root window
-//
-var win2 = Titanium.UI.createWindow({  
-    title:'Tab 2',
-    backgroundColor:'#fff'
-});
-var tab2 = Titanium.UI.createTab({  
-    icon:'KS_nav_ui.png',
-    title:'Tab 2',
-    window:win2
+//Main Title Label
+var launchViewText = Ti.UI.createLabel({
+	text: " Five Great Quotes from Five Great Minds",
+	color: "#000",
+	font: {fontSize: 42, fontFamily: "Helvetica", fontWeight: "bold"},
+	top: 40,
+	left: 30,
+	right: 20
 });
 
-var label2 = Titanium.UI.createLabel({
-	color:'#999',
-	text:'I am Window 2',
-	font:{fontSize:20,fontFamily:'Helvetica Neue'},
-	textAlign:'center',
-	width:'auto'
+//Main Title Button
+var launchButton = Ti.UI.createView({
+	backgroundColor: "#31dd25",
+	borderRadius: 20,
+	borderWidth: 1,
+	top: 370,
+	height: 50,
+	left: 20,
+	right: 20
 });
 
-win2.add(label2);
+//Main Title Button Label
+var launchButtonText = Ti.UI.createLabel({
+	text: "Let's Get Started",
+	color: "#fff",
+	font: {fontSize: 30, fontFamily: "Helvetica", fontWeight: "bold"},
+	top: 7,
+	left: 50,
+});
 
+//Label Drop-Shadow
+var launchButtonTextShadow = Ti.UI.createLabel({
+	text: "Let's Get Started",
+	color: "#000",
+	font: {fontSize: 30, fontFamily: "Helvetica", fontWeight: "bold"},
+	top: 9,
+	left: 52,
+});
 
+var LoadFile = require("displayOptions");
 
-//
-//  add tabs
-//
-tabGroup.addTab(tab1);  
-tabGroup.addTab(tab2);  
+launchView.add(launchViewText);
+launchButton.add(launchButtonTextShadow, launchButtonText);
+mainWindow.add(launchView, launchButton);
+mainWindow.open();
 
-
-// open tab group
-tabGroup.open();

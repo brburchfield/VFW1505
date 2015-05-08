@@ -1,0 +1,37 @@
+Ti.UI.setBackgroundColor("#000");
+
+var mainWindow = Ti.UI.createWindow({
+	backgroundColor: "#6b3939"
+});
+
+var launchView = Ti.UI.createView({
+	backgroundColor: "#fff",
+	borderRadius: 5,
+	borderwidth: 1,
+	height: 250,
+	top: 100,
+	left: 20,
+	right: 20
+});
+
+var launchButton = Ti.UI.createView({
+	backgroundColor: "#31dd25",
+	borderRadius: 20,
+	borderWidth: 1,
+	top: 370,
+	height: 50,
+	left: 20,
+	right: 20
+});
+
+var launchViewText = Ti.UI.createLabel({
+	text: " 5 Great Quotes from 5 Great Minds",
+	color: "#000",
+	font: {fontSize: 30, fontFamily: "Helvetica", fontWeight: "bold"},
+	top: 50,
+	left: 10
+});
+
+launchView.add(launchViewText);
+mainWindow.add(launchView, launchButton);
+mainWindow.open();
