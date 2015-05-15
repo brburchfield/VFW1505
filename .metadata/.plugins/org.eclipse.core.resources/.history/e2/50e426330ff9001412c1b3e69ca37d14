@@ -1,0 +1,3 @@
+var loadFile = require("app2_link");
+
+console.log(loadFile.msg);

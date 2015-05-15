@@ -533,3 +533,100 @@ java.lang.NullPointerException
 	at com.aptana.usage.internal.DefaultAnalyticsEventHandler.sendEventSync(DefaultAnalyticsEventHandler.java:241)
 	at com.aptana.usage.internal.DefaultAnalyticsEventHandler$1.run(DefaultAnalyticsEventHandler.java:75)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-05-12 19:58:46.877 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/beauburchfield/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/beauburchfield/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-05-12 19:58:51.552
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 2 0 2015-05-12 19:58:51.728
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-05-12 19:58:51.728
+!MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.run_on_device.android'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-05-12 19:58:51.728
+!MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.debug_on_device.android'
+
+!ENTRY com.aptana.core 4 0 2015-05-12 19:58:55.423
+!MESSAGE (Build 3.4.1.201410281727) [ERROR]  null
+!STACK 0
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:485)
+	at java.lang.UNIXProcess.waitFor(UNIXProcess.java:115)
+	at com.aptana.core.util.ProcessRunner.processData(ProcessRunner.java:381)
+	at com.aptana.core.util.ProcessRunner.processData(ProcessRunner.java:345)
+	at com.aptana.core.util.ProcessRunner.runInBackground(ProcessRunner.java:280)
+	at com.aptana.core.util.ProcessRunner.runInBackground(ProcessRunner.java:254)
+	at com.aptana.core.util.ProcessRunner.runInBackground(ProcessRunner.java:248)
+	at com.aptana.js.internal.core.node.NodeJS.runInBackground(NodeJS.java:186)
+	at com.aptana.js.internal.core.node.NodePackageManager.runInBackground(NodePackageManager.java:827)
+	at com.aptana.js.internal.core.node.NodePackageManager.getModulesPath(NodePackageManager.java:458)
+	at com.appcelerator.titanium.alloy.core.AlloyCorePlugin.getAlloyModulesPath(AlloyCorePlugin.java:165)
+	at com.appcelerator.titanium.alloy.core.AlloyUtil.getAlloyJscaPath(AlloyUtil.java:151)
+	at com.appcelerator.titanium.alloy.core.index.AlloyBuildPathContributor.getBuildPathEntries(AlloyBuildPathContributor.java:37)
+	at com.aptana.buildpath.core.BuildPathManager.getDynamicBuildPaths(BuildPathManager.java:354)
+	at com.aptana.buildpath.core.BuildPathManager.getBuildPaths(BuildPathManager.java:239)
+	at com.aptana.buildpath.core.BuildPathManager.hasBuildPath(BuildPathManager.java:373)
+	at com.appcelerator.titanium.core.util.ContentAssistMetadataUtils.getProjectMetadataBuildPath(ContentAssistMetadataUtils.java:144)
+	at com.appcelerator.titanium.core.internal.mobile.SDKBuildPathContributor.getBuildPathEntries(SDKBuildPathContributor.java:81)
+	at com.aptana.buildpath.core.BuildPathManager.getBuildPaths(BuildPathManager.java:321)
+	at com.aptana.js.core.index.JSIndexQueryHelper.getIndices(JSIndexQueryHelper.java:123)
+	at com.aptana.js.core.index.JSIndexQueryHelper.<init>(JSIndexQueryHelper.java:98)
+	at com.aptana.editor.js.internal.JSModelUtil.createQueryHelper(JSModelUtil.java:90)
+	at com.aptana.editor.js.internal.JSModelUtil.getProperties(JSModelUtil.java:36)
+	at com.aptana.editor.js.text.JSTextHover.getHoverInfo2(JSTextHover.java:71)
+	at com.aptana.editor.common.CommonSourceViewerConfiguration$TextHover.getHoverInfo2(CommonSourceViewerConfiguration.java:679)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.jface.text 4 0 2015-05-12 19:58:55.440
+!MESSAGE Unexpected runtime error while computing a text hover
+!STACK 0
+java.lang.NullPointerException
+	at com.aptana.js.internal.core.node.NodePackageManager.getModulesPath(NodePackageManager.java:459)
+	at com.appcelerator.titanium.alloy.core.AlloyCorePlugin.getAlloyModulesPath(AlloyCorePlugin.java:165)
+	at com.appcelerator.titanium.alloy.core.AlloyUtil.getAlloyJscaPath(AlloyUtil.java:151)
+	at com.appcelerator.titanium.alloy.core.index.AlloyBuildPathContributor.getBuildPathEntries(AlloyBuildPathContributor.java:37)
+	at com.aptana.buildpath.core.BuildPathManager.getDynamicBuildPaths(BuildPathManager.java:354)
+	at com.aptana.buildpath.core.BuildPathManager.getBuildPaths(BuildPathManager.java:239)
+	at com.aptana.buildpath.core.BuildPathManager.hasBuildPath(BuildPathManager.java:373)
+	at com.appcelerator.titanium.core.util.ContentAssistMetadataUtils.getProjectMetadataBuildPath(ContentAssistMetadataUtils.java:144)
+	at com.appcelerator.titanium.core.internal.mobile.SDKBuildPathContributor.getBuildPathEntries(SDKBuildPathContributor.java:81)
+	at com.aptana.buildpath.core.BuildPathManager.getBuildPaths(BuildPathManager.java:321)
+	at com.aptana.js.core.index.JSIndexQueryHelper.getIndices(JSIndexQueryHelper.java:123)
+	at com.aptana.js.core.index.JSIndexQueryHelper.<init>(JSIndexQueryHelper.java:98)
+	at com.aptana.editor.js.internal.JSModelUtil.createQueryHelper(JSModelUtil.java:90)
+	at com.aptana.editor.js.internal.JSModelUtil.getProperties(JSModelUtil.java:36)
+	at com.aptana.editor.js.text.JSTextHover.getHoverInfo2(JSTextHover.java:71)
+	at com.aptana.editor.common.CommonSourceViewerConfiguration$TextHover.getHoverInfo2(CommonSourceViewerConfiguration.java:679)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-05-12 20:52:27.009
+!MESSAGE An internal error occurred during: "Sending Analytics Ping ...".
+!STACK 0
+java.lang.NullPointerException
+	at com.aptana.usage.internal.DefaultAnalyticsEventHandler.getAnalyticsLogger(DefaultAnalyticsEventHandler.java:207)
+	at com.aptana.usage.internal.DefaultAnalyticsEventHandler.sendEventSync(DefaultAnalyticsEventHandler.java:241)
+	at com.aptana.usage.internal.DefaultAnalyticsEventHandler$1.run(DefaultAnalyticsEventHandler.java:75)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-05-15 15:24:00.623 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/beauburchfield/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/beauburchfield/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-05-15 15:24:27.654
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 2 0 2015-05-15 15:24:27.813
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-05-15 15:24:27.813
+!MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.run_on_device.android'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-05-15 15:24:27.814
+!MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.debug_on_device.android'
