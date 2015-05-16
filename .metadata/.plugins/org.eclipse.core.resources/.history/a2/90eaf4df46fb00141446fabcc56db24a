@@ -1,0 +1,94 @@
+//JSON Object
+var masters = {
+	"painters":{
+		"theTitle": "Painters",
+		"masterList": [
+			{
+				"name": "Leonardo Da Vinci",
+				"description": "Leonardo Da Vinci is one of the most well-known Rennaisance..."
+			},
+			{
+				"name": "Donatello",
+				"description": "Donatello is an amazing..."
+			},
+			{
+				"name": "Michaelangelo",
+				"description": "Michaelangelo is an amazing..."
+			},
+			{
+				"name": "Donatello",
+				"description": "Donatello is an amazing..."
+			}
+		]
+	},
+	"composers":{
+		"theTitle": "Composers",
+		"masterList": [
+		{
+				"name": "Composer1",
+				"description": "Composer1 is one of the most well-known Rennaisance..."
+			},
+			{
+				"name": "Composer2",
+				"description": "Composer2 is an amazing..."
+			},
+			{
+				"name": "Composer3",
+				"description": "Composer3 is an amazing..."
+			},
+			{
+				"name": "Composer4",
+				"description": "Composer4 is an amazing..."
+			}
+		]
+	}
+};
+
+var mainWindow = Ti.Ui.createWindow({
+	title: "Renaissance Masters",
+	backgroundColor: "#dadada"
+});
+
+var navWindow = Ti.UI.iOS.createNavigationWindow({
+	window: mainWindow
+});
+
+var makeUI = function(){
+	var spacing = 80;
+	for(n in masters){
+		var titleLabel = Ti.UI.createLabel({
+			text: masters[n].theTitle,
+			left: 15,
+			right: 15,
+			top: spacing,
+			height: 25,
+			backgroundColor: "#333",
+			font: {fontSize: 22, fontFamily: "Verdana"},
+			color: "#fafafa"
+		});
+		spacing = titleLabel.top + titleLabel.height + 10;
+		console.log(spacing);
+		for(m in masters[n].masterList){
+			var itemLabel = Ti.UI.createLabel({
+				text: masters[n].masterList[m].name,
+				details: masters[n].masterList[m].description,
+				left: 30,
+				right: 15,
+				top: spacing,
+				height: 25,
+				backgroundColor: "#ffffff",
+				font: {fontSize: 22, fontFamily: "Verdana"},
+				color: "#333"
+			});
+			mainWindow.add(itemLabel);
+			spacing = itemLabel.top + itemLabel.height +10;
+		}
+		mainWindow.add(titleLabel);
+		spacing = itemLabel.top + itemLabel.height + 40;
+	}
+};
+
+makeUI();
+
+navWindow.open();
+

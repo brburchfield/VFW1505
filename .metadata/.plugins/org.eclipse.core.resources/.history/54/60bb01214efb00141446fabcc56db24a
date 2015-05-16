@@ -1,0 +1,75 @@
+Titanium.UI.setBackgroundColor('#000');
+
+//Creating Data List
+var masters = {
+	"painters":{
+		"theTitle": "Painters",
+		"masterList": [
+			{
+				"name": "Leonardo Da Vinci",
+				"description": "Leonardo Da Vinci is one of the most well-known Rennaisance..."
+			},
+			{
+				"name": "Donatello",
+				"description": "Donatello is an amazing..."
+			},
+			{
+				"name": "Michaelangelo",
+				"description": "Michaelangelo is an amazing..."
+			},
+			{
+				"name": "Donatello",
+				"description": "Donatello is an amazing..."
+			}
+		]
+	},
+	"composers":{
+		"theTitle": "Composers",
+		"masterList": [
+		{
+				"name": "Composer1",
+				"description": "Composer1 is one of the most well-known Rennaisance..."
+			},
+			{
+				"name": "Composer2",
+				"description": "Composer2 is an amazing..."
+			},
+			{
+				"name": "Composer3",
+				"description": "Composer3 is an amazing..."
+			},
+			{
+				"name": "Composer4",
+				"description": "Composer4 is an amazing..."
+			}
+		]
+	}
+};
+
+var mainWindow = Ti.UI.createWindow({
+	backgroundColor: "#f5f5f5"
+});
+
+var titleView = Ti.UI.createView({
+	height: 65,
+	backgroundColor: "#fff",
+	top: 0
+});
+
+var border = Ti.UI.createView({
+	backgroundColor: "#dbdbdb",
+	height: 1,
+	top: titleView.height + titleView.top
+});
+
+var titleLabel = Ti.UI.createLabel({
+	text: "Rennaissance Masters",
+	font: {fontSize: 20, fontFamily: "Arial", fontWeight: "bold"},
+	top: 30,
+	width: "#100%",
+	textAlign: "center"
+});
+
+titleView.add(titleLabel);
+mainWindow.add(titleView, border);
+mainWindow.open();
