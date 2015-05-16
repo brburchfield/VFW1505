@@ -63,7 +63,14 @@ var composersSection = Ti.UI.createTableViewSection({
 	footerTitle: "Masters of the Note"
 });
 
+
+//getDetail Placeholder, in case this doesn't work.
+
+
 var loadFile = require("getDetails");
+
+masterView.setData(mastersSections);
+
 titleView.add(titleLabel);
 mainWindow.add(titleView, border, masterView);
 navWindow.open();
