@@ -1,3 +1,0 @@
-var msg = "hello";
-
-exports.myMessage = msg;
