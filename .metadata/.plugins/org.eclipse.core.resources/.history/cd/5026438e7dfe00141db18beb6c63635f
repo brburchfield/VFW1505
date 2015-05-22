@@ -1,0 +1,16 @@
+var win = Ti.UI.createWindow({
+	backgroundColor: "white",	
+	orientationModes: [
+	Ti.UI.PORTRAIT,
+	Ti.UI.LANDSCAPE_LEFT,
+	Ti.UI.LANDSCAPE_RIGHT,
+	Ti.UI.UPSIDE_PORTRAIT
+	]
+});
+
+var image = Ti.UI.createImageView({
+	image: '/images/mononoke.jpg'
+});
+win.add(image);
+
+win.open();
