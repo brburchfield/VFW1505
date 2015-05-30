@@ -1,0 +1,11 @@
+var mainWindow = function(){
+	var dataWindow = Ti.UI.createWindow({
+		title: "Data",
+		backgroundColor: "#0075B2"
+	});
+	dataWindow.add();
+	navWindow.openWindow(dataWindow);
+};
+
+
+dataButton.addEventListener("click", mainWindow);

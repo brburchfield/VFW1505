@@ -1,0 +1,76 @@
+
+//Open Picture Window
+var getPicture = function(dataSource){
+	var galleryWindow = Ti.UI.createWindow({
+		backgroundColor: "#16471f"
+	});
+	
+	//Title Bar
+	var titleBar = Ti.UI.createView({
+		backgroundColor: "333333",
+		top: 20,
+		height: 50
+	});
+	
+	//Title Bar Text
+	var titleText = Ti.UI.createLabel({
+		text: "Picture Gallery",
+		color: "#fff",
+		textAlign: "center",
+		font: {fontSize: 20, fontFamily: "Helvetica", fontWeight: "bold"}
+		});
+		
+		//Picture View
+		var newImage = Ti.UI.createImageView({
+			image: dataSource,
+			top: 80,
+			bottom: 100,
+			left: 10,
+			right: 10,
+			borderRadius: 10
+		});
+		
+		//Picture Label
+		var pictureLabel = Ti.UI.createLabel({
+			backgroundColor: "#333333",
+			text: dataSource,
+			color: "#fff",
+			font: {fontSize: 20, fontFamily: "Helvetica", fontWeight: "bold"},
+			bottom: 70,
+			width: "100%",
+			textAlign: "center"
+		});
+		
+		//Border
+		var border = Ti.UI.createView({
+			backgroundColor: "#000",
+			top: titleBar.top + titleBar.height,
+			height: 1
+		});
+		
+		//Close Button
+		var closeButton = Ti.UI.createLabel({
+			backgroundColor: "#fff",
+			text: "Close",
+			color: "#000",
+			height: 50,
+			font: {fontSize: 20, fontFamily: "Helvetica", fontWeight: "bold"},
+			bottom: 0,
+			width: "50%",
+			borderRadius: 25,
+			textAlign: "center"
+		});
+		
+		//Close Window
+		var exitWindow = function(){
+			galleryWindow.close();
+		};
+		
+		//Code
+		closeButton.addEventListener("click", exitWindow);
+		titleBar.add(titleText);
+		galleryWindow.add(titleBar, border, closeButton, pictureLabel, newImage);
+		galleryWindow.open();
+};
+
+galleryButton.addEventListener("click", galleryWindow);

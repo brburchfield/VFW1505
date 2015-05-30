@@ -1,0 +1,14 @@
+var masterView = Ti.UI.createTableView({
+	top: 100
+});
+
+var mainWindow = function(){
+	var dataWindow = Ti.UI.createWindow({
+		title: "Data",
+		backgroundColor: "#0075B2"
+	});
+	dataWindow.add(masterView);
+	navWindow.openWindow(dataWindow);
+};
+
+dataButton.addEventListener("click", mainWindow);

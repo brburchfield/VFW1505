@@ -1,9 +1,0 @@
-var win = Ti.UI.createWindow({
-	backgroundColor: "white"	
-});
-
-var image = Ti.UI.createImageView({
-	image: '/images/mononoke.jpg'
-});
-win.add(image);
-win.open();

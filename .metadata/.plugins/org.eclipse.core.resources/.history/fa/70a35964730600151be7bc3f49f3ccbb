@@ -1,0 +1,107 @@
+var loadDataDetails = require("dataDetails");
+
+var painting = [
+	{title: "Leonardo Da Vinci", description: "Leonardo di ser Piero da Vinci was an Italian polymath, painter, sculptor, architect, musician, mathematician, engineer, inventor, anatomist, geologist, cartographer, botanist, and writer. He is widely considered to be one of the greatest painters of all time and perhaps the most diversely talented person ever to have lived."},
+	{title: "Michaelango", description: "Michelangelo di Lodovico Buonarroti Simoni was an Italian sculptor, painter, architect, poet, and engineer of the High Renaissance who exerted an unparalleled influence on the development of Western art. Considered as the greatest living artist in his lifetime, he has since been held as one of the greatest artists of all time."},
+	{title: "Donatello", description: "Donato di Niccolò di Betto Bardi was an early Renaissance sculptor from Florence. He is, in part, known for his work in bas-relief, a form of shallow relief sculpture that, in Donatello's case, incorporated significant 15th-century developments in perspectival illusionism."},
+	{title: "Raphael", description: "Raffaello Sanzio da Urbino was an Italian painter and architect of the High Renaissance. His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur."}
+];
+
+var masterView = Ti.UI.createTableView({
+	top: 10,
+	bottom: 10,
+});
+
+if(Ti.Platform.name === "iPhone OS"){
+	masterView.style = Ti.UI.iPhone.TableViewStyle.GROUPED;
+};
+
+var paintingSection = Ti.UI.createTableViewSection({
+	headerTitle: "Types of Paint Styles",
+	footerTitle: "TestFooter"
+});
+
+var mainWindow = function(){
+	var dataWindow = Ti.UI.createWindow({
+		title: "Data",
+		backgroundColor: "#0075B2"
+	});
+
+
+	masterView.add(paintingSection);
+	dataWindow.add(masterView);
+	navWindow.openWindow(dataWindow);
+};
+//Begin getDetail Function
+var getDetail = function(){
+	var detailWindow = Ti.UI.createWindow({
+		backgroundColor: "#f5f5f5"
+	});
+
+		var detailTitleView = Ti.UI.createView({
+		height: 65,
+		backgroundColor: "#fff",
+		top: 0
+	});
+	
+	var detailBorder = Ti.UI.createView({
+		backgroundColor: "#dbdbdb",
+		height: 1,
+		top: detailTitleView.height + detailTitleView.top
+	});
+	
+	var detailTitleLabel = Ti.UI.createLabel({
+		text: this.title,
+		font: {fontSize: 20, fontFamily: "Arial", fontWeight: "bold"},
+		top: 30,
+		textAlign: "center"
+	});
+	
+	var detailText = Ti.UI.createLabel({
+		text: this.desc,
+		font: {fontSize: 20, fontFamily: "Arial"},
+		top: detailBorder.height + detailBorder.top + 40,
+		left: 10,
+		right: 10,
+		textAlign: "center"
+	});
+	
+	var closeButton = Ti.UI.createLabel({
+		text: "Close Window",
+		backgroundColor: "#333",
+		color: "#fff",
+		height: 50,
+		font: {fontSize: 18, fontFamily: "Arial"}, 
+		width: "100%",
+		bottom: 0,
+		textAlign: "center"
+	});
+
+	var closeWindow = function(){
+		//detailWindow.close();
+		navWindow.closeWindow(detailWindow);
+	};
+
+	closeButton.addEventListener("click", closeWindow);
+
+	detailTitleView.add(detailTitleLabel);
+	detailWindow.add(detailTitleView, detailBorder, detailText, closeButton);
+	
+	navWindow.openWindow(detailWindow);
+};
+//End getDetail Function
+
+
+for(var i=0, j=painting.length; i<j; i++){
+	var theRow = Ti.UI.createTableViewRow({
+		title: painting[i].title,
+		desc:  painting[i].description,
+		hasChild: true
+	});
+	paintingSection.add(theRow);
+}
+
+var firstSection = [paintingSection];
+
+masterView.setData(firstSection);
+dataButton.addEventListener("click", mainWindow);

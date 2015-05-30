@@ -1,0 +1,49 @@
+//Intro Window
+var introWindow = Ti.UI.createWindow({
+	backgroundColor: "#0075B2"
+});
+
+//Welcome View
+var welcome = Ti.UI.createView({
+	backgroundColor: "#B26400",
+	height: 50,
+	width: "100%",
+	top: 20
+});
+
+//Title Label
+
+var titleText = Ti.UI.createLabel({
+	text: "TitleText",
+	color: "#fff",
+	font: {fontSize: 30, fontFamily: "Helvetica", fontWeight: "bold"},
+	textAlign: "center"
+});
+
+
+//Intro Button View
+var introButton = Ti.UI.createView({
+	backgroundColor: "#FE8F00",
+	height: 100,
+	width: 300,
+	borderRadius: 50,
+	//top: welcome.top + welcome.height + 20
+	bottom: 30
+});
+
+//Intro Button Label
+var buttonText = Ti.UI.createLabel({
+	text: "View Gallery",
+	color: "#000",
+	font: {fontSize: 40, fontFamily: "Helvetica", fontWeight: "bold"},
+	textAlign: "center"
+});
+
+//Loading gallerycode.js
+var loadFile = require("gallerycode");
+var loadFile2 = require("datacode");
+
+welcome.add(titleText);
+introWindow.add(welcome, introButton);
+introButton.add(buttonText);
+introWindow.open();
