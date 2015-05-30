@@ -4,8 +4,8 @@ var galleryImages = imageList.getDirectoryListing();
 var painting = [
 	{title: "Fresco", description: "Fresco is a technique of mural painting executed upon freshly-laid, or wet lime plaster. Water is used as the vehicle for the pigment to merge with the plaster, and with the setting of the plaster, the painting becomes an integral part of the wall.", picture: "images/zzz1.jpg"},
 	{title: "Egg Tempera", description: "The egg tempera painting technique was the main method of applying paint to panel throughout the early renaissance. As the title suggests the pigment is mixed with egg, using the white of the egg or the yolk results in different effects, the mixture is fast drying and permanent.", picture: "images/zzz2.jpg"},
-	{title: "Oil Painting", description: "The oil painting technique was to become dominant in the 15th and 16th centuries, it has remained as the artists favorite medium only being challenged in the latter years of the twentieth century by the advent of acrylic paint." +
-	" Artists working in tempera found that their colours lacked the covering power of oils while the fresco painter was unable to make alterations to his work.", picture: "images/zzz3.jpg"}
+	{title: "Oil Painting", picture: "The oil painting technique was to become dominant in the 15th and 16th centuries, it has remained as the artists favorite medium only being challenged in the latter years of the twentieth century by the advent of acrylic paint." +
+	" Artists working in tempera found that their colours lacked the covering power of oils while the fresco painter was unable to make alterations to his work.", image: "images/zzz3.jpg"}
 ];
 
 var masterView = Ti.UI.createTableView({
