@@ -36,7 +36,7 @@ var mainWindow = function(){
 //Begin getDetail Function
 var getDetail = function(){
 	var detailWindow = Ti.UI.createWindow({
-		backgroundColor: "#f5f5f5"
+		backgroundColor: "#0075B2"
 	});
 
 		var detailTitleView = Ti.UI.createView({
@@ -46,7 +46,7 @@ var getDetail = function(){
 	});
 	
 	var detailBorder = Ti.UI.createView({
-		backgroundColor: "#dbdbdb",
+		backgroundColor: "#0075B2",
 		height: 1,
 		top: detailTitleView.height + detailTitleView.top
 	});
@@ -66,7 +66,8 @@ var getDetail = function(){
 	
 	var detailText = Ti.UI.createLabel({
 		text: this.desc,
-		font: {fontSize: 20, fontFamily: "Arial"},
+		font: {fontSize: 20, fontFamily: "Helvetica"},
+		color: "#fff",
 		top: detailBorder.height + detailBorder.top + 40,
 		left: 10,
 		right: 10,
@@ -76,10 +77,10 @@ var getDetail = function(){
 	
 	var closeButton = Ti.UI.createLabel({
 		text: "Close Window",
-		backgroundColor: "#333",
+		backgroundColor: "#FF9E0B",
 		color: "#fff",
 		height: 50,
-		font: {fontSize: 18, fontFamily: "Arial"}, 
+		font: {fontSize: 18, fontFamily: "Helvetica"}, 
 		width: "100%",
 		bottom: 0,
 		textAlign: "center"

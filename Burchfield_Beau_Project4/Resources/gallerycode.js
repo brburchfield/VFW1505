@@ -16,7 +16,7 @@ var imageView = function(){
 };
 
 var nextButton = Ti.UI.createView({
-	backgroundColor: "#B26400",
+	backgroundColor: "#FF9E0B",
 	height: 80,
 	bottom: 5,
 	left: 10,
