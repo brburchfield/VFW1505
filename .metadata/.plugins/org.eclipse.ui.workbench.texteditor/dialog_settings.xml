@@ -1,20 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="265" key="DIALOG_WIDTH"/>
+		<item value="170" key="DIALOG_Y_ORIGIN"/>
+		<item value="399" key="DIALOG_HEIGHT"/>
+		<item value="426" key="DIALOG_X_ORIGIN"/>
+		<item value="1|.Helvetica Neue DeskInterface|11.0|0|COCOA|1|.HelveticaNeueDeskInterface-Regular" key="DIALOG_FONT_NAME"/>
+	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="isRegEx"/>
 		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="dataSource" key="selection"/>
+		<item value="title" key="selection"/>
 		<list key="findhistory">
-			<item value="dataSource"/>
-			<item value="ImageView"/>
-			<item value="imagesFolder"/>
-			<item value="imageFiles"/>
-			<item value="newImage"/>
+			<item value="title"/>
+			<item value="nav"/>
+			<item value="composers"/>
+			<item value="painters"/>
+			<item value="getDetails"/>
+			<item value="lastPainting"/>
+			<item value="pictureWindow"/>
 			<item value="getPicture"/>
-			<item value="image"/>
-			<item value="images"/>
+		</list>
+		<list key="replacehistory">
+			<item value="dataDetails"/>
 		</list>
 	</section>
 </section>

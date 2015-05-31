@@ -1,5 +1,6 @@
 //Intro Window
 var launchWindow = Ti.UI.createWindow({
+	title: "Renaissance: Revisited",
 	backgroundColor: "#0075B2"
 });
 
@@ -13,6 +14,15 @@ var title = Ti.UI.createView({
 	height: 50,
 	width: "100%",
 	top: 20
+});
+
+//Name Label
+var nameLabel = Ti.UI.createLabel({
+	text: "VFW1505-01, Beau Burchfield",
+	color: "#fff",
+	font: {fontSize: 20, fontFamily: "Helvetica", fontWeight: "bold"},
+	textAlign: "center",
+	top: 100
 });
 
 //Title Label
@@ -95,5 +105,5 @@ title.add(titleTextShadow, titleText);
 customButton.add(customButtonText);
 dataButton.add(dataButtonText);
 galleryButton.add(gallerybuttonText);
-launchWindow.add(title, galleryButton, dataButton, customButton);
+launchWindow.add(nameLabel, title, galleryButton, dataButton, customButton);
 navWindow.open();
