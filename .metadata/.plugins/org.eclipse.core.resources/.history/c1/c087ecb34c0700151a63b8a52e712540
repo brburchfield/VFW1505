@@ -67,7 +67,6 @@ for(var i=0, j=painters.length; i<j; i++){
 		hasChild: true
 	});
 	paintersSection.add(theRow);
-	theRow.addEventListener("click", getDetail);
 }
 
 for(var i=0, j=composers.length; i<j; i++){
