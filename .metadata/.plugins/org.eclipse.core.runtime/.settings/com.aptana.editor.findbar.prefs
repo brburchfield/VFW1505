@@ -1,3 +1,3 @@
-FIND_BAR_DECORATOR_FIND_ENTRIES=\#\n\#Sat May 30 00\:27\:17 CDT 2015\n9\=dataSource\n8\=main\n7\=getPicture\n6\=pictureWindow\n5\=lastPainting\n4\=getDetails\n3\=painters\n2\=composers\n1\=nav\n0\=title\n
+FIND_BAR_DECORATOR_FIND_ENTRIES=\#\n\#Sat May 30 01\:15\:26 CDT 2015\n9\=getPicture\n8\=pictureWindow\n7\=lastPainting\n6\=getDetails\n5\=painters\n4\=composers\n3\=nav\n2\=title\n1\=FF9E0B\n0\=launch\n
 FIND_BAR_DECORATOR_REPLACE_ENTRIES=\#\n\#Fri May 29 20\:50\:14 CDT 2015\n5\=launch\n4\=galleryWindow\n3\=currentPainting\n2\=dataDetails\n1\=***PAINTERS***\n0\=painters\n
 eclipse.preferences.version=1
